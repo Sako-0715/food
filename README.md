@@ -1,16 +1,49 @@
-# React + Vite
+# food_test_lp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+フード系ランディングページ（LP）のフロントエンドプロジェクトです。
 
-Currently, two official plugins are available:
+## 🛠 技術スタック
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **UI Framework**: React 19 / TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS v4
+- **Component Library**: shadcn/ui
+- **Icons**: Lucide React
 
-## React Compiler
+## 🚀 開発コマンド
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **開発サーバーの起動**: `npm run dev`（HMR対応のローカルサーバーが起動します）
+- **ビルド**: `npm run build`（本番用の静的ファイルを `dist` に生成します）
+- **プレビュー**: `npm run preview`（ビルド後のファイルを確認できます）
+- **リント**: `npm run lint`（コードの静的解析を実行します）
+- **バリデーション（型チェック＋リント）**: `npm run validate`（コミット前に実行される検証を行います）
 
-## Expanding the ESLint configuration
+## 🧩 shadcn/ui コンポーネントの追加
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+新しいUIコンポーネントを追加したい場合は、プロジェクトルートで以下のコマンドを実行します。
+
+`npx shadcn@latest add [component-name]`
+（例: `npx shadcn@latest add dialog` / `npx shadcn@latest add card` など）
+
+## 📁 ディレクトリ構成の主要ポイント
+
+food_test_lp/
+├── src/
+│ ├── components/ # 共通コンポーネント
+│ │ ├── home/ # 各画面・機能ごとのコンポーネント
+│ │ └── ui/ # shadcn/ui のUIコンポーネント
+│ ├── lib/
+│ │ └── utils.ts # ユーティリティ関数（cn等）
+│ ├── App.tsx # メインコンポーネント
+│ └── main.tsx # エントリーポイント
+├── components.json # shadcn/ui 設定ファイル
+├── tsconfig.json # TypeScript 設定ファイル（パスエイリアス `@/*` 設定済）
+└── vite.config.js # Vite 設定ファイル
+
+## 🔗 パスエイリアスについて
+
+`@/` は `./src/` ディレクトリを指すように設定されています。
+
+使用例:
+`import { Button } from "@/components/ui/button";`
+`import { cn } from "@/lib/utils";`
