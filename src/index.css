@@ -1,6 +1,10 @@
+@import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-@import '@fontsource-variable/geist';
+
+@theme {
+  --font-sans: 'Geist Variable', sans-serif;
+}
 
 :root {
   --text: #6b6375;
