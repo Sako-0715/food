@@ -6,19 +6,14 @@ import React from "react";
  */
 export const FirstSectionVideo: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-white lg:bg-(--bg) text-slate-900 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
-      <div className="relative left-1/2 -translate-x-1/2 w-screen max-w-none sm:max-w-2xl sm:left-auto sm:translate-x-0 sm:mx-auto">
-        <video
-          src="/videos/firstSectionMovie.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-auto object-cover block sm:rounded-xl shadow-md lg:shadow-xl border border-slate-200"
-        />
-      </div>
-    </section>
+    <video
+      src="/videos/firstSectionMovie.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-auto object-cover block sm:rounded-b-xl shadow-md lg:shadow-xl border-t-0 border-slate-200"
+    />
   );
 };
-
 export default FirstSectionVideo;

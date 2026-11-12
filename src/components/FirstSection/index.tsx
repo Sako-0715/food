@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ScrollPopup } from "@/components/ScrollPopup";
-//import { FirstSectionVideo } from "@/components/FirstSectionvideo";
+import { FirstSectionVideo } from "@/components/FirstSectionVideo";
 import tomatoSoup from "@/assets/tomatoSoup.png";
 import firstHeader from "@/assets/firstHeader.png";
 import totalSoup from "@/assets/totalSoup.png";
@@ -76,6 +76,7 @@ export const FirstSection: React.FC = () => {
           alt="カロトスープ"
           className="w-full h-auto object-cover block sm:rounded-b-xl shadow-md lg:shadow-xl border-t-0 border-slate-200"
         />
+        <FirstSectionVideo />
       </div>
       <ScrollPopup imageSrc={saleBanner} isVisible={showPopup} />
     </section>
