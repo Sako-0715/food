@@ -1,18 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import { fileURLToPath } from 'url';
-import path from 'path';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      // '@' という記述を './src' ディレクトリに置き換える設定
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+  plugins: [react(), tailwindcss(), tsconfigPaths()],
 });
