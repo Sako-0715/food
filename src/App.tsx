@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 
 function App(): React.JSX.Element {
   return (
-    <main className="min-h-screen bg-(--bg) text-slate-900">
+    <main className="min-h-screen bg-background text-slate-900">
       {/* ファーストビュー */}
       <HeroSection />
 
